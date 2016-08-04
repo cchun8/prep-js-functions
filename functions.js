@@ -21,13 +21,12 @@ var b=1101
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
-var sum=a+b;
 function add(n1, n2){
 
 	return n1+n2
 }
 add();
-console.log(sum);
+console.log(add(a, b));
 /**
  *  #3
  *  Function - subtract
@@ -35,13 +34,7 @@ console.log(sum);
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
-var difference=a-b;
-function subtract(n1, n2){
 
-	return n1-n2
-}
-subtract();
-console.log(difference);
 
 /**
  *  #4
