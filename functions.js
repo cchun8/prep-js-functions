@@ -11,7 +11,8 @@
  *  variable names you will create as they will become input to _other_
  *  functions.
  */
-
+var a=323
+var b=1101
 
 /**
  *  #2
@@ -20,8 +21,13 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+var sum=a+b;
+function add(n1, n2){
 
-
+	return n1+n2
+}
+add();
+console.log(sum);
 /**
  *  #3
  *  Function - subtract
