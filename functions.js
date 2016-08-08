@@ -11,8 +11,8 @@
  *  variable names you will create as they will become input to _other_
  *  functions.
  */
-var a=323
-var b=1101
+var a=7
+var b=10
 
 /**
  *  #2
@@ -22,10 +22,9 @@ var b=1101
  *  Store this value in a variable named `sum`.
  */
 function add(n1, n2){
-
-	return n1+n2
+	return n1+n2;
 }
-add();
+var sum=add(a, b);
 console.log(add(a, b));
 /**
  *  #3
@@ -34,8 +33,11 @@ console.log(add(a, b));
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
-
-
+function subtract(n1, n2){
+	return n2-n1;
+}
+var difference=subtract(a, b);
+console.log(difference);
 /**
  *  #4
  *  Function - multiply
@@ -43,9 +45,12 @@ console.log(add(a, b));
  *  This function returns the result of multiplying `b` by `a`.
  *  Store this value in a variable named `product`
  */
-
-
-/**
+function multiply(n1, n2){
+	return n2*n1;
+}
+var product=multiply(a, b);
+console.log(multiply(a, b));
+/**x
  *  #5
  *  Function - checkDifference
  *
@@ -54,8 +59,11 @@ console.log(add(a, b));
  *  "My football team lost X times this week", where `X` is the
  *  value stored in `difference`.
  */
-
-
+function checkDifference(x){
+	return "My football team lost " + x + " times this week!" 
+}
+var x=difference;
+console.log(checkDifference(x));
 /**
  *  #6
  *  Function - checkSum
@@ -65,8 +73,11 @@ console.log(add(a, b));
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-
-
+function checkSum(X){
+	return "I can addz "+ X + " Numbers!"
+}
+var X=sum;
+console.log(checkSum(X));
 /**
  *  #7
  *  Function - checkProduct
@@ -75,8 +86,10 @@ console.log(add(a, b));
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-
-
+function checkProduct(){
+	return product*difference;
+}
+console.log(checkProduct());
 /**
  *  #8
  *  Function - addThenSubtract
@@ -90,8 +103,10 @@ console.log(add(a, b));
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-
-
+ function addThenSubtract(n1, n2, n3){
+ 	return (n1+n2)-n3;
+ }
+ console.log(addThenSubtract(product, difference, sum));
 /**
  *  #9
  *  Function - addThenMultiply
@@ -103,8 +118,10 @@ console.log(add(a, b));
  *
  *  Store the return of this function to a variable named `howMany`
  */
-
-
+function addThenMultiply(n1, n2, n3){
+ 	return (n1+n2)*n3;
+ }
+ console.log(addThenMultiply(product, difference, sum));
 /**
  *  #10
  *  Function - createFullName
@@ -119,8 +136,11 @@ console.log(add(a, b));
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
-
-
+function createFullName(firstName, lastName){
+	return firstName + ' ' + lastName;
+}
+var myFullName=createFullName("Claire", "Chun");
+console.log(myFullName)
 /**
  *  #11
  *  Function - verifyDrinkingAge
@@ -135,7 +155,15 @@ console.log(add(a, b));
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
-
+function verifyDrinkingAge(age){
+	if(age>=21){
+		return true;
+	} else {
+		return false;
+	}
+}
+var canDrinkBeer=verifyDrinkingAge(20);
+console.log(canDrinkBeer);
 
 /**
  *  #12
@@ -146,8 +174,14 @@ console.log(add(a, b));
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
-
-
+function throwParty(){
+	if(canDrinkBeer===false){
+		return "The party will have tons of cake!";
+	}else{
+		return "This Party will have an open bar!"
+	}
+}
+console.log(throwParty());
 /**
  *  #13
  *  Function - eatFood
@@ -167,7 +201,10 @@ console.log(add(a, b));
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
-
+function eatFood(firstName, lastName, food){
+	return createFullName(firstName, lastName) + " loves to eat " + food;
+}
+console.log(eatFood("Dennis", "Hopper", "cheese"));
 
 /**
  *  #14
@@ -180,4 +217,3 @@ console.log(add(a, b));
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
-
